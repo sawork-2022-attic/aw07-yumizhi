@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: cart-service
+
+
+eureka:
+  client:
+    service-url:
+      #      defaultZone: http://127.0.0.1:${server.port}/eureka/eureka/
+      defaultZone: http://localhost:8888/eureka/
+
+
+server:
+  port: 8082   # HTTP (Tomcat) port
