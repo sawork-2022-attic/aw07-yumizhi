@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: pos-delivery
+  h2:
+    console.enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: pass1234
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  cloud:
+    function:
+      definition: receiveOrder
+    stream:
+      function:
+        bindings:
+          receiveOrder-in-0: order-receive
+      bindings:
+        order-receive:
+          destination: order-channel
+
+eureka:
+  client:
+    service-url:
+      #      defaultZone: http://127.0.0.1:${server.port}/eureka/eureka/
+      defaultZone: http://localhost:8888/eureka/
+
+
+server:
+  port: 8086   # HTTP (Tomcat) port
