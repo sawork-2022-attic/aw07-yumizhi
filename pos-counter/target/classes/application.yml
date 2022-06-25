@@ -1,14 +1,11 @@
 spring:
   application:
-    name: counter-service
-
-
+    name: pos-counter
+server:
+  port: 8685
 eureka:
   client:
-    service-url:
-      #      defaultZone: http://127.0.0.1:${server.port}/eureka/eureka/
-      defaultZone: http://localhost:8888/eureka/
-
-
-server:
-  port: 8083   # HTTP (Tomcat) port
+    serviceUrl:
+      defaultZone: http://localhost:8666/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}

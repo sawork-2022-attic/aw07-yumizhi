@@ -1,14 +1,11 @@
 spring:
   application:
-    name: product-service
-
-
+    name: pos-products
+server:
+  port: 8688
 eureka:
   client:
-    service-url:
-      #      defaultZone: http://127.0.0.1:${server.port}/eureka/eureka/
-      defaultZone: http://localhost:8888/eureka/
-
-
-server:
-  port: 8081   # HTTP (Tomcat) port
+    serviceUrl:
+      defaultZone: http://localhost:8666/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}

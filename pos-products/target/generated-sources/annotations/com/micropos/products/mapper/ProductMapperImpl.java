@@ -1,6 +1,6 @@
 package com.micropos.products.mapper;
 
-import com.micropos.products.dto.ProductDto;
+import com.micropos.dto.ProductDto;
 import com.micropos.products.model.Product;
 import java.util.ArrayList;
 import java.util.Collection;

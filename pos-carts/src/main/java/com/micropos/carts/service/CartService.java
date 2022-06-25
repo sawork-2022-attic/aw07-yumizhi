@@ -1,19 +1,28 @@
 package com.micropos.carts.service;
 
-import com.micropos.carts.model.*;
+import com.micropos.carts.model.Cart;
+import com.micropos.carts.model.Item;
+import com.micropos.dto.OrderDto;
+
 import java.util.List;
+import java.util.Optional;
+
 public interface CartService {
 
-    public void checkout(Cart cart);
-    public void cancel(Cart cart);
-    public Cart add(Cart cart, Product product, int amount);
+    Double getTotal(Cart cart);
 
-    public Cart add(Cart cart, String productId, int amount);
+    Double getTotal(Integer cartId);
 
-    public Cart delete(Cart cart, String productId);
+    OrderDto checkout(Cart cart);
 
+    Optional<OrderDto> checkout(Integer cartId);
 
-    //public List<Product> products();
+    Cart createCart(Cart cart);
 
-    //public Product randomProduct();
+    Cart add(Cart cart, Item item);
+
+    List<Cart> getAllCarts();
+
+    Optional<Cart> getCart(Integer cartId);
+
 }

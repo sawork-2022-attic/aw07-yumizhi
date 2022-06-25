@@ -1,9 +1,3 @@
-D:\codeWithIntelliJ\software_architecture\aw07-yumizhi\pos-counter\target\generated-sources\openapi\src\main\java\com\micropos\counter\api\ApiUtil.java
-D:\codeWithIntelliJ\software_architecture\aw07-yumizhi\pos-counter\target\generated-sources\openapi\src\main\java\com\micropos\counter\dto\ErrorDto.java
-D:\codeWithIntelliJ\software_architecture\aw07-yumizhi\pos-counter\src\main\java\com\micropos\counter\CounterApplication.java
-D:\codeWithIntelliJ\software_architecture\aw07-yumizhi\pos-counter\src\main\java\com\micropos\counter\rest\CounterController.java
-D:\codeWithIntelliJ\software_architecture\aw07-yumizhi\pos-counter\target\generated-sources\openapi\src\main\java\com\micropos\counter\dto\CartDto.java
-D:\codeWithIntelliJ\software_architecture\aw07-yumizhi\pos-counter\target\generated-sources\openapi\src\main\java\com\micropos\counter\dto\ProductDto.java
-D:\codeWithIntelliJ\software_architecture\aw07-yumizhi\pos-counter\target\generated-sources\openapi\src\main\java\com\micropos\counter\dto\OrderDto.java
-D:\codeWithIntelliJ\software_architecture\aw07-yumizhi\pos-counter\target\generated-sources\openapi\src\main\java\com\micropos\counter\api\CartApi.java
-D:\codeWithIntelliJ\software_architecture\aw07-yumizhi\pos-counter\target\generated-sources\openapi\src\main\java\com\micropos\counter\dto\ItemDto.java
+D:\codeWithIntelliJ\software_architecture\micropos\pos-counter\src\main\java\com\micropos\counter\web\CounterController.java
+D:\codeWithIntelliJ\software_architecture\micropos\pos-counter\src\main\java\com\micropos\counter\service\CounterService.java
+D:\codeWithIntelliJ\software_architecture\micropos\pos-counter\src\main\java\com\micropos\counter\CounterApplication.java
