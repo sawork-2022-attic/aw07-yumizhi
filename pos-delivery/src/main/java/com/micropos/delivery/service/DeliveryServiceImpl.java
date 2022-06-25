@@ -26,7 +26,7 @@ public class DeliveryServiceImpl implements DeliveryService{
     public void setDeliveryRepository(DeliveryRepository deliveryRepository) { this.deliveryRepository = deliveryRepository; }
 
     @Bean
-    public Consumer<OrderDto> receiveOrder() {
+    Consumer<OrderDto> receiveOrder() {
         return orderDto -> {
             log.info("receive: {}",  orderDto);
             createEntry(orderDto);
@@ -36,16 +36,16 @@ public class DeliveryServiceImpl implements DeliveryService{
     @Override
     public Entry createEntry(OrderDto orderDto) {
         Entry entry = new Entry().orderId(orderDto.getId()).status("preparing");
-        return (Entry) deliveryRepository.save(entry);
+        return deliveryRepository.save(entry);
     }
 
     @Override
     public List<Entry> getAllEntries() {
-        return deliveryRepository.findAll();
+        return Streamable.of(deliveryRepository.findAll()).toList();
     }
 
     @Override
-    public Entry getEntry(Integer orderId) {
-        return (Entry) deliveryRepository.findEntryById(orderId);
+    public Optional<Entry> getEntry(Integer orderId) {
+        return deliveryRepository.findById(orderId);
     }
 }
